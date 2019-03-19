@@ -1,0 +1,89 @@
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+		<script type="text/javascript" src="getAll.js"></script>
+
+
+	</head> 
+
+
+	<body>
+
+		<div id="getAll" style="width:1000px;"></div>
+
+		<script>
+
+			var data = getData();
+
+			var text = [], sent = [], time = []
+
+			for (var key in data) {
+				text.push(data[key].text)
+				sent.push(data[key].sentiment)
+				time.push(data[key].time.replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/,"$1 $2 $4 $3 UTC"))
+			}
+
+			//var date = new Date(time[0].replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/,"$1 $2 $4 $3 UTC"));
+
+			var data2 = getData2();
+
+			var text2 = [], sent2 = [], time2 = []
+
+			for (var key in data2) {
+				text2.push(data2[key].text)
+				sent2.push(data2[key].sentiment)
+				time2.push(data2[key].time.replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/,"$1 $2 $4 $3 UTC"))
+			}
+
+			var trace2 = {
+				x: time2,
+				y: sent2,
+				mode: 'markers',
+				type: 'scatter',
+				name: 'Team B',
+				text: text2,
+				marker: { size: 12, 'color': 'orange' }
+			};
+			
+			var trace1 = {
+				x: time,
+				y: sent,
+				mode: 'markers',
+				type: 'scatter',
+				name: 'Team A',
+				text: text,
+				marker: { size: 12 }
+			}; 
+
+			var data = [trace1, trace2];
+
+			var layout = {
+				xaxis: {
+					title:'Time Created'
+				},
+				yaxis: {
+					range: [-1, 1],
+					title:'Sentiment'
+				},
+				hovermode:'closest',
+				title:'Tweet Sentiment',
+				margin: {
+					b: 150
+				}
+			};
+
+			Plotly.newPlot('getAll', data, layout);
+
+		</script>
+
+	</body>
+
+
+	</html>
+
