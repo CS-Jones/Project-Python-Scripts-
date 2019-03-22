@@ -2,7 +2,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly
 import json
-plotly.tools.set_credentials_file(username='CallumJonesUni', api_key='MNHkSzd4itjwHjMObfbR')
+plotly.tools.set_credentials_file(username='', api_key='')
 
 # Create random data with numpy
 import numpy as np

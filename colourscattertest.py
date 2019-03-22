@@ -4,7 +4,7 @@ import plotly
 import json
 import datetime
 from collections import defaultdict
-plotly.tools.set_credentials_file(username='CallumJonesUni', api_key='MNHkSzd4itjwHjMObfbR')
+plotly.tools.set_credentials_file(username='', api_key='')
 
 
 

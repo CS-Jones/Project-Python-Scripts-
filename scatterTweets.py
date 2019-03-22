@@ -2,7 +2,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly
 import json
-plotly.tools.set_credentials_file(username='CallumJonesUni', api_key='ZdZVK03e6Wa492hYMBr1')
+plotly.tools.set_credentials_file(username='', api_key='')
 import numpy as np
 
 N = 10

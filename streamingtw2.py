@@ -4,10 +4,10 @@ from tweepy import Stream
 import json
 
 # Variables that contains the user credentials to access Twitter API
-access_token = "221143834-0DRKB4IQZZDCH5daCMwSwk6ho0btJfWfEt0qLEZX"
-access_token_secret = "p994lr2ToMWICMPBBc4DY3VNy9eHAOSuOQ1ivkGCCKRGG"
-consumer_key = "EYwq6RuhjSts2Ib9pe79V8tg1"
-consumer_secret = "16tJrXQcL4aVNHhULKCuNxzqLx5ycb6Kl3XsBEKzthGt9yNewU"
+access_token = ""
+access_token_secret = ""
+consumer_key = ""
+consumer_secret = ""
 
 f = open('streamingtweets2.json','a', newline='')
 #analyser = SentimentIntensityAnalyzer()

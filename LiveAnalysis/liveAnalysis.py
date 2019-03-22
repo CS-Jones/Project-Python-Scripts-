@@ -8,10 +8,10 @@ from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import TweetTokenizer
 
-ckey = "EYwq6RuhjSts2Ib9pe79V8tg1"
-csecret = "16tJrXQcL4aVNHhULKCuNxzqLx5ycb6Kl3XsBEKzthGt9yNewU"
-atoken = "221143834-0DRKB4IQZZDCH5daCMwSwk6ho0btJfWfEt0qLEZX"
-asecret = "p994lr2ToMWICMPBBc4DY3VNy9eHAOSuOQ1ivkGCCKRGG"
+ckey = ""
+csecret = ""
+atoken = ""
+asecret = ""
 
 tknzr = TweetTokenizer()
 analyzer = SentimentIntensityAnalyzer()
