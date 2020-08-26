@@ -1,7 +1,7 @@
-import plotly.plotly as py
+import chart_studio.plotly as py
 import plotly.graph_objs as go
 import plotly
-plotly.tools.set_credentials_file(username='', api_key='')
+
 
 # Create random data with numpy
 import numpy as np
@@ -16,6 +16,6 @@ trace = go.Scatter(
 
 data = [trace]
 
+#py.iplot(data, filename='basic-scatter')
 
-py.iplot(data, filename='basic-scatter')
-
+plotly.offline.plot(trace, filename='name.html')
